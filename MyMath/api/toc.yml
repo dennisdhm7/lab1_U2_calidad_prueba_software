@@ -1,0 +1,10 @@
+### YamlMime:TableOfContent
+items:
+- uid: Math.Lib
+  name: Math.Lib
+  type: Namespace
+  items:
+  - uid: Math.Lib.Rooter
+    name: Rooter
+    type: Class
+memberLayout: SamePage

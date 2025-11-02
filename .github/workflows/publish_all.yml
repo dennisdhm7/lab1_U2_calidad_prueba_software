@@ -1,0 +1,84 @@
+name: 🚀 Publicar documentación y reporte de cobertura
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "publish-all"
+  cancel-in-progress: false
+
+jobs:
+  build-test-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠️ Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Configurar .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # ==============================
+      # 🧪 TESTS Y COBERTURA
+      # ==============================
+      - name: 🧩 Restaurar dependencias
+        run: dotnet restore MyMath/MyMath.sln
+
+      - name: 🧱 Compilar solución
+        run: dotnet build MyMath/MyMath.sln --no-restore --configuration Release
+
+      - name: 🧪 Ejecutar pruebas con cobertura
+        run: dotnet test MyMath/Math.Tests/Math.Tests.csproj --collect:"XPlat Code Coverage" --results-directory MyMath/TestResults --logger "trx"
+
+      - name: 📊 Instalar ReportGenerator
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          export PATH="$PATH:/home/runner/.dotnet/tools"
+
+      - name: 🧮 Generar reporte HTML de cobertura
+        run: reportgenerator "-reports:MyMath/TestResults/*/coverage.cobertura.xml" "-targetdir:MyMath/Cobertura" -reporttypes:Html
+
+      # ==============================
+      # 📘 GENERACIÓN DE DOCFX
+      # ==============================
+      - name: 📦 Instalar DocFX
+        run: dotnet tool update -g docfx
+
+      - name: 🧱 Generar documentación con DocFX
+        run: docfx MyMath/docfx.json
+
+      # ==============================
+      # 📂 COMBINAR DOCFX + COBERTURA
+      # ==============================
+      - name: 🧩 Mover reporte de cobertura dentro del sitio DocFX
+        run: |
+          mkdir -p MyMath/_site/coverage
+          cp -r MyMath/Cobertura/* MyMath/_site/coverage/
+
+      # ==============================
+      # 📤 PUBLICAR EN GITHUB PAGES
+      # ==============================
+      - name: 📤 Subir artefacto completo para GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: MyMath/_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build-test-docs
+    steps:
+      - name: 🚀 Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

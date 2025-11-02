@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 🎯 Configuración general -->
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- 📦 Metadatos del paquete NuGet -->
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Christian Dennis Hinojosa Mucho</Authors>
+    <Company>UPT-FAING-EPIS</Company>
+
+    <!-- 🔗 Repositorio personal público -->
+    <RepositoryUrl>https://github.com/dennisdhm7/lab1_U2_calidad_prueba_software</RepositoryUrl>
+
+    <PackageId>Math.Lib</PackageId>
+    <Version>1.0.0-SI784</Version>
+    <Description>
+      Laboratorio U2 - Calidad y Pruebas de Software.
+      📦 Librería matemática desarrollada por Christian Dennis Hinojosa Mucho (SI784).
+    </Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- 🔗 Enlace al sitio de documentación o demo -->
+    <PackageProjectUrl>https://dennisdhm7.github.io/lab1_U2_calidad_prueba_software/</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>

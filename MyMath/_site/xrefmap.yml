@@ -1,0 +1,31 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Math.Lib
+  name: Math.Lib
+  href: api/Math.Lib.html
+  commentId: N:Math.Lib
+  fullName: Math.Lib
+  nameWithType: Math.Lib
+- uid: Math.Lib.Rooter
+  name: Rooter
+  href: api/Math.Lib.Rooter.html
+  commentId: T:Math.Lib.Rooter
+  fullName: Math.Lib.Rooter
+  nameWithType: Rooter
+- uid: Math.Lib.Rooter.SquareRoot(System.Double)
+  name: SquareRoot(double)
+  href: api/Math.Lib.Rooter.html#Math_Lib_Rooter_SquareRoot_System_Double_
+  commentId: M:Math.Lib.Rooter.SquareRoot(System.Double)
+  name.vb: SquareRoot(Double)
+  fullName: Math.Lib.Rooter.SquareRoot(double)
+  fullName.vb: Math.Lib.Rooter.SquareRoot(Double)
+  nameWithType: Rooter.SquareRoot(double)
+  nameWithType.vb: Rooter.SquareRoot(Double)
+- uid: Math.Lib.Rooter.SquareRoot*
+  name: SquareRoot
+  href: api/Math.Lib.Rooter.html#Math_Lib_Rooter_SquareRoot_
+  commentId: Overload:Math.Lib.Rooter.SquareRoot
+  isSpec: "True"
+  fullName: Math.Lib.Rooter.SquareRoot
+  nameWithType: Rooter.SquareRoot

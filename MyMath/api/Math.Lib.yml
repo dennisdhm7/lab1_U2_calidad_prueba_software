@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Math.Lib
+  commentId: N:Math.Lib
+  id: Math.Lib
+  children:
+  - Math.Lib.Rooter
+  langs:
+  - csharp
+  - vb
+  name: Math.Lib
+  nameWithType: Math.Lib
+  fullName: Math.Lib
+  type: Namespace
+  assemblies:
+  - Math.Lib
+references:
+- uid: Math.Lib.Rooter
+  commentId: T:Math.Lib.Rooter
+  href: Math.Lib.Rooter.html
+  name: Rooter
+  nameWithType: Rooter
+  fullName: Math.Lib.Rooter

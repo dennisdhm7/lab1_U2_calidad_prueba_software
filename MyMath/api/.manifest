@@ -1,0 +1,5 @@
+{
+  "Math.Lib": "Math.Lib.yml",
+  "Math.Lib.Rooter": "Math.Lib.Rooter.yml",
+  "Math.Lib.Rooter.SquareRoot(System.Double)": "Math.Lib.Rooter.yml"
+}

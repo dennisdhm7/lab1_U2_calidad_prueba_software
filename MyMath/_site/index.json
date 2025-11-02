@@ -1,0 +1,27 @@
+{
+  "api/Math.Lib.Rooter.html": {
+    "href": "api/Math.Lib.Rooter.html",
+    "title": "Class Rooter | Laboratorio U2 - Pruebas Unitarias con MSTest",
+    "summary": "Class Rooter Namespace Math.Lib Assembly Math.Lib.dll Proporciona métodos matemáticos personalizados para el cálculo de raíces cuadradas. public class Rooter Inheritance object Rooter Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods SquareRoot(double) Calcula la raíz cuadrada de un número positivo utilizando un método iterativo. public double SquareRoot(double input) Parameters input double Valor numérico del cual se desea obtener la raíz cuadrada. Debe ser positivo. Returns double La raíz cuadrada del número especificado. Exceptions ArgumentOutOfRangeException Se lanza cuando el valor de input es menor o igual a cero."
+  },
+  "api/Math.Lib.html": {
+    "href": "api/Math.Lib.html",
+    "title": "Namespace Math.Lib | Laboratorio U2 - Pruebas Unitarias con MSTest",
+    "summary": "Namespace Math.Lib Classes Rooter Proporciona métodos matemáticos personalizados para el cálculo de raíces cuadradas."
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Laboratorio U2 - Pruebas Unitarias con MSTest",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Laboratorio U2 - Pruebas Unitarias con MSTest",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "\uD83D\uDCD8 Laboratorio U2 - Pruebas Unitarias con MSTest | Laboratorio U2 - Pruebas Unitarias con MSTest",
+    "summary": "\uD83D\uDCD8 Laboratorio U2 - Pruebas Unitarias con MSTest Curso: Calidad y Pruebas de Software Alumno: Christian Dennis Hinojosa Mucho Código: SI784 Periodo: 2025-II \uD83E\uDDE9 Descripción Este laboratorio implementa una librería matemática Math.Lib con pruebas unitarias usando MSTest y cobertura de código. Además, se documenta automáticamente con DocFX y se publica en GitHub Pages mediante un flujo de trabajo continuo. \uD83D\uDCDA Estructura del proyecto Math.Lib → Librería principal (clase Rooter) Math.Tests → Proyecto de pruebas unitarias Cobertura → Reporte de cobertura HTML docs → Documentación adicional generada por DocFX \uD83D\uDD27 Generación de documentación docfx docfx.json docfx serve _site"
+  }
+}
